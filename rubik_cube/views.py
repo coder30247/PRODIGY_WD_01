@@ -3,4 +3,4 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return render(request, 'landingpage/index.html')
+    return render(request, 'rubik_cube/index.html')
