@@ -1,41 +1,119 @@
-#navigation {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: antiquewhite;
+    padding: 8em 0em 2em;
+}
+
+nav {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    background-color: #333;
-    color: #fff;
-    display: flex; /* Add this */
-    justify-content: space-between; /* Add this */
+    background-color: #111;
+    padding: 10px;
+    text-align: flex-start; /* Updated */
+    border-bottom: 1px solid #e9ecef;
 }
 
-#navigation ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Add this */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-#navigation ul li {
-    display: inline-block;
+nav ul li {
+    margin-left: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
 }
 
-#navigation ul li a {
-    display: block;
-    padding: 15px;
-    color: #fff;
+nav ul li:first-child,
+nav ul li .logo {
+    margin-right: auto;
+    width: 3em;
+}
+
+nav ul li a {
     text-decoration: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: #eee;
+    font-size: 1.67em;
 }
 
-#navigation ul li a:hover {
-    background-color: #555;
+nav ul li a:hover {
+    background-color: #999;
+    color: #eee;
+}
+h1 {
+    text-align: left;
+    padding: 3.5em 2em 0em;
+    margin-top: -3em;
+}
+.container .cardblock {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 1em #999;
+}
+.container .cardblock p {
+    margin: 1em;
+    padding: 2em;
+    font-size: 1.5em;
 }
 
-#logo {
-    display: inline-block;
-    padding: 20px;
-    color: #fff;
-    text-decoration: none;
-    width: 4em;
-    height: auto;
+.container .cardblock img {
+    width: 20em;
+}
+
+.container .cardblock img:hover {
+    transform: scale(1.2);
+}
+
+h2 {
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    padding-top: 4em;
+    margin-top: -3em;
+    font-size: 2em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+}
+
+.grid-container .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 1em #999;
+}
+.grid-container .card img {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 20em;
+}
+
+.grid-container .card p {
+    margin: auto auto 1em auto;
+    font-size: 1.5em;
 }
