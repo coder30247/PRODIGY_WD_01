@@ -8,7 +8,7 @@ html {
 }
 body {
     background-color: antiquewhite;
-    padding: 8em 0em 2em;
+    padding: 8em 0em 0em;
 }
 
 nav {
@@ -57,9 +57,17 @@ h1 {
     padding: 3.5em 2em 0em;
     margin-top: -3em;
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
 .container .cardblock {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
     justify-content: flex-start;
     align-items: center;
     margin: 1em;
@@ -69,17 +77,20 @@ h1 {
     box-shadow: 0 0 1em #999;
 }
 .container .cardblock p {
+    max-width: 42em;
     margin: 1em;
     padding: 2em;
     font-size: 1.5em;
 }
 
 .container .cardblock img {
+    justify-content: center;
     width: 20em;
 }
 
 .container .cardblock img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 h2 {
@@ -116,4 +127,77 @@ h2 {
 .grid-container .card p {
     margin: auto auto 1em auto;
     font-size: 1.5em;
+}
+
+.container .cardblock h2 {
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    font-size: 2em;
+}
+.container .cardblock p {
+    margin: 1em;
+    padding: 0em 2em 1em;
+    font-size: 1.5em;
+}
+
+.container .cardblock a {
+    text-decoration: none;
+    padding: 0.5em;
+    margin-right: 1em;
+    margin-left: 2.5em;
+    border-radius: 0.5em;
+    background-color: greenyellow;
+    text-align: center;
+    color: #333;
+    font-size: 1.67em;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    color: #eee;
+    padding: 1em 0em 0em;
+    bottom: 0;
+    width: 100%;
+
+    border-radius: 2em 2em 0em 0em;
+}
+
+.footer-container h3 {
+    margin: 1em;
+    align-self: center;
+}
+
+.footer-container .footer-block ul {
+    list-style: none;
+    margin-left: 1em;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 1em;
+    border-radius: 0.5em;
+}
+.footer-container .footer-block ul li {
+    display: flex;
+    align-items: center;
+    margin: 1em;
+    padding-left: 1em;
+    font-size: 1.5em;
+}
+.footer-container .footer-block li img {
+    width: 1em;
+    margin: 1em;
+    filter: invert(1);
+}
+
+.footer-container .footer-block ul li:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
